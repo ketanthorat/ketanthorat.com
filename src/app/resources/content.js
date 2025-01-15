@@ -32,7 +32,12 @@ const social = [
         link: 'https://www.linkedin.com/in/k2thorat/',
     },
     {
-        name: 'Twitter',
+        name: 'Instagram',
+        icon: 'instagram',
+        link: 'https://www.instagram.com/ketanthorat.ai/',
+    },
+    {
+        name: 'X',
         icon: 'x',
         link: 'https://x.com/ketanthorat_ai',
     },
@@ -40,7 +45,7 @@ const social = [
         name: 'Email',
         icon: 'email',
         link: 'mailto:ketanthorat.ai@gmail.com',
-    },
+    }
 ]
 
 const home = {
@@ -48,7 +53,11 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Robotics engineer and innovator</>,
-    subline: <>I'm Ketan, a robotics engineer at <InlineCode>Robonex Innovations</InlineCode>, where I build intelligent<br/> systems and innovative solutions. After hours, I create my own projects.</>
+    subline: <>Here's the updated introduction:
+
+    ---
+    
+    Hi, Im Ketan Thorat— a passionate robotics engineer, innovator, and entrepreneur driving advancements in AI, IoT, and automation. With a knack for solving real-world problems, I specialize in creating intelligent systems and building solutions that bridge technology with impact. With over 2.5 years of experience as a community manager, I have honed my skills in fostering collaboration, sharing knowledge, and empowering communities in technology. Explore my portfolio to discover my journey, projects, and vision for the future of robotics and automation.</>
 }
 
 const about = {
@@ -69,7 +78,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Ketan is a Nashik-based robotics engineer with a passion for creating advanced solutions in automation and artificial intelligence. His work integrates hardware, software, and innovation to tackle complex challenges in the robotics industry.</>
+        description: <>Ketan is robotics engineer with a passion for creating advanced solutions in automation and artificial intelligence. His work integrates hardware, software, and innovation to tackle complex challenges in the robotics industry.</>
     },
     work: {
         display: true, // set to false to hide this section
@@ -77,11 +86,12 @@ const about = {
         experiences: [
             {
                 company: 'Robonex Innovations',
-                timeframe: '2021 - Present',
+                timeframe: '2024 - Present',
                 role: 'Founder and Robotics Engineer',
                 achievements: [
                     <>Developed an innovative SLAM-based robotics platform, enhancing automation capabilities by 30%.</>,
-                    <>Led a team to build IoT-integrated devices, improving efficiency in industrial automation systems.</>
+                    <>Led a team to build IoT-integrated devices, improving efficiency in industrial automation systems.</>,
+                    <>Conducting seminar on robotics and automation for students and professionals.</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
