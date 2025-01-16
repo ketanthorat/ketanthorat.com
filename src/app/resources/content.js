@@ -84,24 +84,7 @@ const about = {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
-            {
-                company: 'Robonex Innovations',
-                timeframe: '2024 - Present',
-                role: 'Founder and Robotics Engineer',
-                achievements: [
-                    <>Developed an innovative SLAM-based robotics platform, enhancing automation capabilities by 30%.</>,
-                    <>Led a team to build IoT-integrated devices, improving efficiency in industrial automation systems.</>,
-                    <>Conducting seminar on robotics and automation for students and professionals.</>
-                ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Robonex Innovations Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
-            },
+            
             {
                 company: 'ML Nashik',
                 timeframe: 'Feb 2024-  Present',
@@ -111,7 +94,29 @@ const about = {
                     <>Established partnerships with local industries to promote technology adoption and skill development.</>
                 ],
                 images: [ ]
-            }
+            },
+            {
+                company: 'Akudo Technologies Private Limited',
+                timeframe: 'Dec 2021 - Oct 2022',
+                role: 'Community Management Intern',
+                achievements: [
+                    <>Grew and moderated the Discord Community, ensuring smooth discussions and user engagement.</>,
+                    <>Organized and managed digital events and marketing campaigns for the brand.</>,
+                    <>Assisted in establishing Akudo's presence on Instagram, Quora, Telegram, and Uable.</>
+                ],
+                images: [ ]
+            },
+            {
+                company: 'Yaro Technologies Limited',
+                timeframe: 'May 2022 - Jul 2022',
+                role: 'Community Manager Intern',
+                achievements: [
+                    <>Planned and strategized the growth of the company's social presence across various platforms.</>,
+                    <>Engaged in creating and executing marketing campaigns to promote the brand and drive user engagement.</>,
+                    <>Assisted in establishing Yaro's presence on Instagram, Quora, Telegram, and Uable.</>
+                ],
+                images: [ ]
+            },
         ]
     },
     studies: {
