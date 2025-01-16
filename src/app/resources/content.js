@@ -53,7 +53,11 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Robotics engineer and innovator</>,
-    subline: <>Hi, Im Ketan Thorat— a passionate robotics engineer, innovator, and entrepreneur driving advancements in AI, IoT, and automation. With a knack for solving real-world problems, I specialize in creating intelligent systems and building solutions that bridge technology with impact. With over 2.5 years of experience as a community manager, I have honed my skills in fostering collaboration, sharing knowledge, and empowering communities in technology. Explore my portfolio to discover my journey, projects, and vision for the future of robotics and automation.</>
+    subline: <>Here's the updated introduction:
+
+    ---
+    
+    Hi, Im Ketan Thorat— a passionate robotics engineer, innovator, and entrepreneur driving advancements in AI, IoT, and automation. With a knack for solving real-world problems, I specialize in creating intelligent systems and building solutions that bridge technology with impact. With over 2.5 years of experience as a community manager, I have honed my skills in fostering collaboration, sharing knowledge, and empowering communities in technology. Explore my portfolio to discover my journey, projects, and vision for the future of robotics and automation.</>
 }
 
 const about = {
@@ -81,6 +85,24 @@ const about = {
         title: 'Work Experience',
         experiences: [
             {
+                company: 'Robonex Innovations',
+                timeframe: '2024 - Present',
+                role: 'Founder and Robotics Engineer',
+                achievements: [
+                    <>Developed an innovative SLAM-based robotics platform, enhancing automation capabilities by 30%.</>,
+                    <>Led a team to build IoT-integrated devices, improving efficiency in industrial automation systems.</>,
+                    <>Conducting seminar on robotics and automation for students and professionals.</>
+                ],
+                images: [ // optional: leave the array empty if you don't want to display images
+                    {
+                        src: '/images/projects/project-01/cover-01.jpg',
+                        alt: 'Robonex Innovations Project',
+                        width: 16,
+                        height: 9
+                    }
+                ]
+            },
+            {
                 company: 'ML Nashik',
                 timeframe: 'Feb 2024-  Present',
                 role: 'Community Manager',
@@ -91,6 +113,7 @@ const about = {
                 images: [ ]
             },
             {
+
                 company: 'Akudo Technologies Private Limited',
                 timeframe: 'Dec 2021 - Oct 2022',
                 role: 'Community Management Intern',
@@ -99,9 +122,12 @@ const about = {
                     <>Organized and managed digital events and marketing campaigns for the brand.</>,
                     <>Assisted in establishing Akudo's presence on Instagram, Quora, Telegram, and Uable.</>
                 ],
+
                 images: [ ]
+
             },
             {
+
                 company: 'Yaro Technologies Limited',
                 timeframe: 'May 2022 - Jul 2022',
                 role: 'Community Manager Intern',
@@ -111,8 +137,8 @@ const about = {
                     <>Assisted in establishing Yaro's presence on Instagram, Quora, Telegram, and Uable.</>
                 ],
                 images: [ ]
-            },
-            ]
+            }
+        ]
     },
     studies: {
         display: true, // set to false to hide this section
