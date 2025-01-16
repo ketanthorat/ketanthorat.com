@@ -1,140 +1,44 @@
-# Prosthetic Hand Using Arduino and PCA9685 Servo Motor Driver.
+---
+title: "Automating Design Handovers with a Figma to Code Pipeline"
+publishedAt: "2024-04-01"
+summary: "Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think."
+images:
+  - "/images/projects/project-01/cover-02.jpg"
+  - "/images/projects/project-01/image-03.jpg"
+team:
+  - name: "John Doe"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+link: "https://once-ui.com/"
+---
 
+## Overview
 
-![Robotic Hand using Arduino UNO](images/Robotic_hand.jpeg "Robotic Hand using Arduino UNO")
+In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated workflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
 
-Have you ever imagined creating a robotic hand? Cool, right?  
-Before you start building this amazing project, check out this **[viral video reel](https://www.instagram.com/reel/C81rujxsz5r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)** showcasing a functional prosthetic hand that inspired this project.  
+## Key Features
 
-This guide will walk you through creating a prosthetic hand using **Arduino**, **PCA9685 Servo Motor Driver**, nylon threads, elastic threads, and 3D-printed parts. It's an exciting project combining **mechanical design**, **electronics**, and **programming**!
+- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
+- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
+- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
+- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
+
+## Technologies Used
+
+- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
+- **React and Next.js**: For building the front-end codebase with clean, reusable components.
+- **Styled-Components**: For managing styles dynamically using design tokens.
+- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
+
+## Challenges and Learnings
+
+One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
+
+## Outcome
+
+The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
 
 ---
 
-## Components Required
-To create this project, you will need the following components:
-
-### Mechanical Components:
-1. 3D-printed parts (fingers, palm, and frame)  
-2. Black 1 mm elastic thread (for finger support)  
-3. Nylon threads (for finger movements)
-
-![Checkout the 3D Printed Part docs here](3D Files Robo Hand.zip)
-
-### Electronics:
-1. **Arduino Uno** (microcontroller)  
-2. **PCA9685 Servo Motor Driver**  
-3. Servo motors (MG90S or equivalent)  
-4. Jumper wires (Male-to-Male and Male-to-Female)  
-5. Breadboard (optional)  
-6. Power supply (5V for the servo motor driver)  
-
-### Software:
-1. **Arduino IDE**  
-2. Libraries:
-   - `Wire.h` for serial communication  
-   - `PWMServoMotorDriver.h` for PCA9685 Servo Motor Driver  
-
----
-
-## Steps to Create the Prosthetic Hand
-
-### Step 1: Print the 3D Parts
-Print the 3D parts using `.stl` files. Refer to [this video tutorial](https://youtu.be/Fvg-v8FPcjg?si=KikUXmBYxO24s8cP) for detailed guidance on printing the 3D parts.
-
----
-
-### Step 2: Attach Servo Motors
-Attach the servo motors to the prosthetic hand structure as shown in the image.
-
----
-
-### Step 3: Assemble Nylon Threads and Elastic Thread
-- Use nylon threads to attach the 3D-printed fingers.  
-- Tie black 1 mm elastic threads along the fingers for additional support.
-
----
-
-### Step 4: Tie Nylon Threads to Servo Motors
-- Secure the nylon threads to the respective servo motors to control finger movement.
-
----
-
-## Electronics Part
-
-### Step 5: Connect the Servo Motors
-- Connect the servo motors to the PCA9685 as follows:  
-  - **Black wire**: Ground (GND)  
-  - **Red wire**: +5V (power)  
-  - **Signal wire (Orange)**: Connect to the **Yellow pin** of the servo motor driver  
-
----
-
-### Step 6: Connect the SCL Pin
-- Connect the **SCL pin** of the PCA9685 to **A5** on the Arduino Uno.
-
----
-
-### Step 7: Connect the SDA Pin
-- Connect the **SDA pin** of the PCA9685 to **A4** on the Arduino Uno.
-
----
-
-### Step 8: Power Connections
-- Connect the **VCC** and **GND** pins of the PCA9685 to:  
-  - **5V** of the Arduino Uno  
-  - **GND** of the Arduino Uno  
-
----
-
-Kindly refer to the following photo for connections.
-![Connections](images/Circuit_Diagram.jpg "Connections between Arduino UNO & PCA9685 Servo Motor Driver")
-
-## Programming the Prosthetic Hand
-
-1. **Upload the Code**:  
-   - Before proceeding with the connections, upload the provided code to the Arduino Uno.  
-   - Make sure to download the necessary libraries:
-     - `Wire.h`
-     - `PWMServoMotorDriver.h`
-   - Set the baud rate to **9600 MHz** in the Arduino IDE.
-   - Keep your PC connected to the Arduino Uno.
-
-2. **Commands for Movements**:  
-   Open the Serial Monitor in the Arduino IDE and enter the following commands to control the hand:
-
-3. **Keep the angle of servo motor between 0 ~ 150 in PCA9685 Servo Driver to 180 ~ 600 degrees**.
-  - The Max angle is 600 & MIN angle is 150 in PCA9685 Motor Driver.
-
-
-| Command | Action             |
-|---------|--------------------|
-| `1`     | Open the hand      |
-| `2`     | Close the hand     |
-| `3`     | Count 1            |
-| `4`     | Count 2            |
-| `5`     | Count 3            |
-| `6`     | Count 4            |
-| `7`     | Count 5            |
-| `8`     | Victory gesture    |
-| `9`     | Yo gesture         |
-
----
-
-## Disclaimer
-Ensure proper connections and follow instructions carefully. This project should be attempted under professional supervision. **Do at your own risk.**
-
----
-
-## Author
-- **Ketan Thorat**
-  - Founder of [Robonex Innovations](https://robonex.in)
-  - Follow on Instagram: [@ketanthorat.ai](https://instagram.com/ketanthorat.ai)
-  - For any queries, kindly mail at ketanthorat.ai@gmail.com
----
-
-### License
-All entities and content are trademarks of Robonex Innovations. For more projects, visit our website or social media.
-
-Happy Learning!  
-Signing off,  
-Ketan Thorat
+This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.
