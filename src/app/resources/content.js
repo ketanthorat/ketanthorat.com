@@ -53,11 +53,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Robotics engineer and innovator</>,
-    subline: <>Here's the updated introduction:
-
-    ---
-    
-    Hi, Im Ketan Thorat— a passionate robotics engineer, innovator, and entrepreneur driving advancements in AI, IoT, and automation. With a knack for solving real-world problems, I specialize in creating intelligent systems and building solutions that bridge technology with impact. With over 2.5 years of experience as a community manager, I have honed my skills in fostering collaboration, sharing knowledge, and empowering communities in technology. Explore my portfolio to discover my journey, projects, and vision for the future of robotics and automation.</>
+    subline: <>Hi, Im Ketan Thorat— a passionate robotics engineer, innovator, and entrepreneur driving advancements in AI, IoT, and automation. With a knack for solving real-world problems, I specialize in creating intelligent systems and building solutions that bridge technology with impact. With over 2.5 years of experience as a community manager, I have honed my skills in fostering collaboration, sharing knowledge, and empowering communities in technology. Explore my portfolio to discover my journey, projects, and vision for the future of robotics and automation.</>
 }
 
 const about = {
